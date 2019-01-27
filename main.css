@@ -1,17 +1,5 @@
-body {
-    text-align: center;
-}
-
-.kartu {
-    width: 1000px ;
-}
-{
-    margin: 10px 10px 10px 10px;
-}
-
-h1{
-    color: blue
-}
-.margin{
-    text-align: justify
+.gaya{
+    margin: 20p;
+    color: blue;
+    padding: 10px
 }
