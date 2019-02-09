@@ -6,3 +6,9 @@ p{
 	color: black;
 	text-align: justify;
 }
+
+.margin{
+	margin: 5px;
+	padding: 5px;
+	border: 3px;
+}
