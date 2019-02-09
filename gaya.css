@@ -1,0 +1,15 @@
+h1{
+    color: blue;
+    text-align: center;
+    font-size: 1cm;
+    font-style: unset
+}
+.gaya-p{
+    margin: 1cm;
+    border: 5mm;
+    padding: 1cm;
+    background-image: url("naruto.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: justify;
+}
