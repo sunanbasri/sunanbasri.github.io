@@ -1,6 +1,9 @@
 h1{
 	text-align: center;
 	color: blue;
+	margin: 1cm;
+	padding: 1cm;
+	border: 5mm;
 }
 .sett{
 	color: black;
