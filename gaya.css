@@ -9,3 +9,8 @@ h1{
     font-size: 5mm;
     color: blue
 }
+img.prof{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
