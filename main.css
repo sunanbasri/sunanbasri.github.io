@@ -2,12 +2,11 @@ h1{
 	text-align: center;
 	color: blue;
 }
-p{
+.sett{
 	color: black;
 	text-align: justify;
-	margin: 7cm;
-	padding: 5cm;
-	border: 2cm;
-	background: brown;
+	margin: 1cm;
+	padding: 1cm;
+	border: 5mm;
 }
 
