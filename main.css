@@ -9,4 +9,8 @@ h1{
 	padding: 1cm;
 	border: 5mm;
 }
-
+h2{
+	text-align: center;
+	color: black;
+	font-size: 3mm;
+}
