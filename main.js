@@ -1,1 +1,1 @@
-alert("penasaran dengan profil saya??")
+alert("profil pribadi")
