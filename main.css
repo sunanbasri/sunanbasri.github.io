@@ -13,7 +13,6 @@ h1{
 	padding-right: 1cm;
 	padding-left: 1cm;
 	border: 5mm;
-	position: absolute;
 }
 .gaya-h{
 	text-align: center;
@@ -21,4 +20,7 @@ h1{
 }
 .gambar{
 	text-align: center;
+}
+.sett-video{
+	position: absolute;
 }
