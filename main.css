@@ -8,8 +8,10 @@ h1{
 .sett{
 	color: black;
 	text-align: justify;
-	margin: 1cm;
-	padding: 1cm;
+	margin-left: 1cm;
+	margin-right: 1cm;
+	padding-right: 1cm;
+	padding-left: 1cm;
 	border: 5mm;
 }
 h2{
