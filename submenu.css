@@ -9,10 +9,10 @@ body {
  
 .menu-wrap {
 	background-color:#53bd84; 
-	height:50px; 
-	line-height:50px; 
+	height:0; 
+	float: right;
 	position:relative;
-	width:770px;
+	width:0;
 	margin:auto;
     margin-top:80px;
     display: inline-block;
