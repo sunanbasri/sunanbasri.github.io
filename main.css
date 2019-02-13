@@ -24,9 +24,9 @@ h1{
 body{
 	background: blue
 }
-.link{
+.link:link{
 	color: red;
 }
 .link:hover{
-	color: white
+	color: white;
 }
