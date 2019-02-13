@@ -1,6 +1,6 @@
 h1{
 	text-align: center;
-	color: blue;
+	color: indigo;
 	margin: 1cm;
 	padding: 1cm;
 	border: 5mm;
@@ -20,4 +20,7 @@ h1{
 }
 .gambar{
 	text-align: center;
+}
+body{
+	background: blue
 }
