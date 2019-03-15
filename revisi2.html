@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<form action="basri.html">
+		<form action="revisi.html" method="post">
 			<table frame="box" align="center">
 				<tr>
 					<td colspan="3"><font size="6" face="cambria">Employee Cheklist</font></td>
@@ -14,9 +14,9 @@
 					<td colspan="3"><font size="4" face="cambria">New Employe</font></td>
 				</tr>
 				<tr>
-					<td><input type="NamaAwal" name="NamaAwal" id="NamaAwal"></td>
-					<td><input type="NamaTengah" name="NamaTengah" id="NamaTengah"></td>
-					<td><input type="NamaAkhir" name="NamaAkhir" id="NamaAkhir"></td>
+					<td><input type="text" name="NamaAwal" id="NamaAwal"></td>
+					<td><input type="text" name="NamaTengah" id="NamaTengah"></td>
+					<td><input type="text" name="NamaAkhir" id="NamaAkhir"></td>
 				</tr>
 				<tr>
 					<td><label for="NamaAwal"><font size="2" face="cambria">First Name</font></label></td>
@@ -27,9 +27,9 @@
 					<td colspan="3"><font size="4" face="cambria">New Employe Supervisor</font></td>
 				</tr>
 				<tr>
-					<td><input type="NamaAwal1" name="NamaAwal1" id="NamaAwal1"></td>
-					<td><input type="NamaTengah1" name="NamaTengah1" id="NamaTengah1"></td>
-					<td><input type="NamaAkhir1" name="NamaAkhir1" id="NamaAkhir1"></td>
+					<td><input type="text" name="NamaAwal1" id="NamaAwal1"></td>
+					<td><input type="text" name="NamaTengah1" id="NamaTengah1"></td>
+					<td><input type="text" name="NamaAkhir1" id="NamaAkhir1"></td>
 				</tr>
 				<tr>
 					<td><label for="NamaAwal1"><font size="2" face="cambria">First Name</font></label></td>
@@ -43,7 +43,7 @@
 				<tr>
 					<td colspan="2">
 						<select id="NamaDapartement" name="NamaDapartement">
-							<option value="1"><font color="blue" face="cambria">--Select Dapartemen--</font><font color="white">aaaaaaaaaaaaaaaaaaaaaaaaaa</font></option>
+							<option value="1"><font color="blue" face="cambria">--Select Dapartemen-- &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</font></option>
 							<option value="2"><font face="cambria">Marketting</font></option>
 							<option value="3"><font face="cambria">Production</font></option>
 							<option value="4"><font face="cambria">Research and Developmet</font></option>
@@ -54,7 +54,7 @@
 					</td>
 					<td>
 						<select id="devision" name="devision">
-							<option value="1"><font face="arial">--Select Devision--</font></option>
+							<option value="1"><font face="arial">--Select Devision-- &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp</font></option>
 							<option value="2"><font face="arial">Devision1</font></option>
 							<option value="3"><font face="arial">Devision2</font></option>
 							<option value="4"><font face="arial">Devision3</font></option>
@@ -65,9 +65,9 @@
 					<td colspan="3"><font size="4" face="cambria">Your Name</font></td>
 				</tr>
 				<tr>
-					<td><input type="NamaAwal2" name="NamaAwal2" id="NamaAwal2"></td>
-					<td><input type="NamaTengah2" name="NamaTengah2" id="NamaTengah2"></td>
-					<td><input type="NamaAkhir2" name="NamaAkhir2" id="NamaAkhir2"></td>
+					<td><input type="text" name="NamaAwal2" id="NamaAwal2"></td>
+					<td><input type="text" name="NamaTengah2" id="NamaTengah2"></td>
+					<td><input type="text" name="NamaAkhir2" id="NamaAkhir2"></td>
 				</tr>
 				<tr>
 					<td><label for="NamaAwal2"><font size="2" face="cambria">First Name</font></label></td>
@@ -139,6 +139,34 @@
 					<td colspan="3">
 						<input name="garansi" id="garantedNo" value="garantedNo" checked type="radio"><label for="garantedNo">No</label>
 					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<font face="arial">Has employee's VPNand remote access been garanted</font>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<input type="radio" id="VPN" name="VPN" value="VPN" checked type="radio"><label for="VPN"><font face="arial">Yes</font></label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<input type="radio" name="VPN" value="VPNno" checked type="radio" id="VPNno"><label for="VPNno"><font face="arial">No</font></label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<label for="note"><font face="arial">Additional Notes:</font></label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<textarea id="note" name="catatan" rows="7" cols="80"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><input type="submit" value="unggah"></td>
 				</tr>
 			</table>
 		</form>
