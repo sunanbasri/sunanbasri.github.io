@@ -1,0 +1,19 @@
+.headercv{
+	column-span: 2;
+	text-align: center;
+	color: blue
+}
+.foto{
+	text-align: center;
+	column-span: 2;
+}
+.foto.img{
+	width: 70;
+	height: 90;
+}
+.table{
+	border: 1;
+}
+.body{
+	background-color: blue;
+}
