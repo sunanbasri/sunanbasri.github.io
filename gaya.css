@@ -1,22 +1,35 @@
-p{
-	color: red;
-}
 .tabel{
 	border: 1px solid black;
-	box-align: center;
 	position: relative;
 	left: 30px;
-	width: 700px;
+	width: 650x;
+	background-color: cadetblue
 }
-.header{
-	width: 500px;
+.header1{
+	background-color: blue;
+	width: 250px;
+}
+.header2{
+	background-color: blue;
+	width: 400px;
 }
 .foto{
 	width: 80px;
 	height: 100px;
 	align-items: center;
 }
+.tabel1{
+	border: 1px solid black;
+	width: auto;
+}
+td{
+	background-color: grey;
+}
 
-.colspa{
-	  column-span: ;
+.hijau{
+	color: green
+}
+
+.panjang{
+	width: 645px
 }
