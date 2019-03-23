@@ -1,8 +1,8 @@
 .tabel{
-	border: 1px solid black;
+	border:1px solid black;
 	position: relative;
 	left: 30px;
-	width: 650x;
+	width: 650px;
 	background-color: cadetblue
 }
 .header1{
