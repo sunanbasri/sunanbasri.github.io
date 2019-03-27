@@ -1,0 +1,291 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+   ],
+   "source": [
+    "class Node:\n",
+    "    def __init__(self, init_data):\n",
+    "        self.data = init_data\n",
+    "        self.next = None\n",
+    "    def getData(self):\n",
+    "        return self.data\n",
+    "    def getNext(self):\n",
+    "        return self.next\n",
+    "    def setData(self, newdata):\n",
+    "        self.data = newdata\n",
+    "    def setNext(self, new_next):\n",
+    "        self.next = new_next"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+   ],
+   "source": [
+    "class LinkedList:\n",
+    "    def __init__(self):\n",
+    "        self.head=None\n",
+    "    def isEmpty(self):\n",
+    "        return self.head==None\n",
+    "    def size(self):\n",
+    "        current = self.head\n",
+    "        count = 0\n",
+    "        while current != None:\n",
+    "            count+=1\n",
+    "            current=current.getNext()\n",
+    "        return count\n",
+    "    def addRear(self,item):\n",
+    "        temp=Node(item)\n",
+    "        if self.isEmpty()==True:\n",
+    "            self.head=temp\n",
+    "        else:\n",
+    "            current=self.head\n",
+    "            previous=None\n",
+    "            while current != None:\n",
+    "                previous=current\n",
+    "                current=current.getNext()\n",
+    "            previous.setNext(temp)\n",
+    "    def __str__(self):\n",
+    "        data=\"[\"\n",
+    "        current=self.head\n",
+    "        while current!=None:\n",
+    "            data+=str(current.data)\n",
+    "            current=current.getNext()\n",
+    "            if current!=None:\n",
+    "                data+=\",\"\n",
+    "        data+=\"]\"\n",
+    "        return(data)\n",
+    "    def insertPrevious(self,obj,item):\n",
+    "        temp=Node(item)\n",
+    "        current=self.head\n",
+    "        previous=None\n",
+    "        stop=False\n",
+    "        while current!=None and not stop:\n",
+    "            if current.getData()==obj:\n",
+    "                stop=True\n",
+    "            else:\n",
+    "                previous=current\n",
+    "                current=current.getNext()\n",
+    "        if stop==True:\n",
+    "            temp.setNext(current)\n",
+    "            previous.setNext(temp)\n",
+    "    def insertNext(self,obj,item):\n",
+    "        temp=Node(item)\n",
+    "        current=self.head\n",
+    "        previous=current\n",
+    "        stop=False\n",
+    "        while current!=None and not stop:\n",
+    "            if previous.getData()==obj:\n",
+    "                stop=True\n",
+    "            else:\n",
+    "                previous=current\n",
+    "                current=current.getNext()\n",
+    "        if stop==True:\n",
+    "            temp.setNext(current)\n",
+    "            previous.setNext(temp)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5,84,12,77]\n"
+     ]
+    }
+   ],
+   "source": [
+    "myList1=LinkedList()\n",
+    "myList1.addRear(5)\n",
+    "myList1.addRear(84)\n",
+    "myList1.addRear(12)\n",
+    "myList1.addRear(77)\n",
+    "print (myList1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5,100,84,12,77]\n"
+     ]
+    }
+   ],
+   "source": [
+    "myList1.insertPrevious(84,100)\n",
+    "print(myList1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5,100,84,12,122,77]\n"
+     ]
+    }
+   ],
+   "source": [
+    "myList1.insertNext(12,122)\n",
+    "print(myList1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+   ],
+   "source": [
+    "class Sorting:\n",
+    "    def __init__(self,a):\n",
+    "        self.Data=a\n",
+    "    def bubbleSort(self,pilihan):\n",
+    "        t1=time.time()/10000000000\n",
+    "        #print('Data yang akan diurutkan : ', self.Data)\n",
+    "        if pilihan==\"a\":\n",
+    "            for outIter in range(len(self.Data)-1,-1,-1):\n",
+    "                for i in range(outIter):\n",
+    "                    if self.Data[i]>self.Data[i+1]:\n",
+    "                        self.Data[i],self.Data[i+1]=self.Data[i+1],self.Data[i]\n",
+    "        elif pilihan==\"d\":\n",
+    "            for outIter in range(len(self.Data)-1,-1,-1):\n",
+    "                for i in range(outIter):\n",
+    "                    if self.Data[i]<self.Data[i+1]:\n",
+    "                        self.Data[i],self.Data[i+1]=self.Data[i+1],self.Data[i]\n",
+    "        return t1\n",
+    "    def selectionSort(self,pilihan):\n",
+    "        t1=time.time()/10000000000\n",
+    "        for outIter in range(len(self.Data)-1):       \n",
+    "            minIndex=outIter\n",
+    "            if pilihan==\"a\":\n",
+    "                for i in range(outIter+1,len(self.Data)):\n",
+    "                    if self.Data[i]<self.Data[minIndex]:\n",
+    "                        minIndex=i\n",
+    "                temp=self.Data[outIter]\n",
+    "                self.Data[outIter]=self.Data[minIndex]\n",
+    "                self.Data[minIndex]=temp\n",
+    "            if pilihan==\"d\":\n",
+    "                for i in range(outIter+1,len(self.Data)):\n",
+    "                    if self.Data[i]>self.Data[minIndex]:\n",
+    "                        minIndex=i\n",
+    "                temp=self.Data[outIter]\n",
+    "                self.Data[outIter]=self.Data[minIndex]\n",
+    "                self.Data[minIndex]=temp\n",
+    "        return t1\n",
+    "    def insertionSort(self,pilihan):\n",
+    "        t1=time.time()/10000000000\n",
+    "        for outIter in range(1,len(self.Data)):\n",
+    "            key=self.Data[outIter]\n",
+    "            ind=outIter\n",
+    "            if pilihan==\"a\":\n",
+    "                while (ind>0 and self.Data[ind-1]>key):\n",
+    "                    self.Data[ind]=self.Data[ind-1]\n",
+    "                    ind=ind-1\n",
+    "                self.Data[ind]=key\n",
+    "            if pilihan==\"d\":\n",
+    "                while (ind>0 and self.Data[ind-1]<key):\n",
+    "                    self.Data[ind]=self.Data[ind-1]\n",
+    "                    ind=ind-1\n",
+    "                self.Data[ind]=key\n",
+    "        return t1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[974, 953, 905, 904, 877, 822, 789, 779, 763, 703, 681, 667, 663, 586, 584, 562, 511, 496, 489, 488, 481, 474, 471, 460, 445, 428, 425, 424, 422, 408, 399, 392, 385, 353, 335, 332, 324, 309, 307, 258, 257, 236, 225, 183, 146, 75, 64, 58, 57, 27]\n",
+      "waktu komputasi 0.1553713854702183 detik\n"
+     ]
+    }
+   ],
+   "source": [
+    "import time\n",
+    "t1=time.time()\n",
+    "import random\n",
+    "a=random.sample(range(0, 1000),50)\n",
+    "dataSort=Sorting(a)\n",
+    "t1=dataSort.bubbleSort(\"a\")\n",
+    "print(dataSort.Data)\n",
+    "print('waktu komputasi',t1,'detik')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 0,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+   ],
+   "source": [
+    "import random\n",
+    "a=random.sample(range(0,1000),500)\n",
+    "datasort=Sorting(a)\n",
+    "t1=datasort.insertionSort(\"d\")\n",
+    "print(datasort.data)\n",
+    "print (\"Total Waktu Proses \", t1, \" Detik.\"  )"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (old Anaconda 3)",
+   "language": "python",
+   "name": "anaconda3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.5.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
